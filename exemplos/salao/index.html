@@ -2,54 +2,107 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Studio Iracema · Salão de beleza em Fortaleza (projeto conceito)</title>
+<title>Studio Iracema · Salão de beleza na Varjota (projeto conceito)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,500;1,6..96,400;1,6..96,500&family=Jost:wght@400;500;600&display=swap" rel="stylesheet">
 <style>
-:root{--rosa:#F7D9DC;--ameixa:#4A1D3F;--lilas:#B98AB0;--creme:#FFF8F6;--tinta:#2B1326}
-*{box-sizing:border-box}body{margin:0;font:400 17px/1.6 "DM Sans",system-ui,sans-serif;color:var(--tinta);background:var(--creme)}
-.conceito{background:var(--tinta);color:#fff;font-size:13px;text-align:center;padding:6px}.conceito a{color:var(--rosa)}
-.w{max-width:1100px;margin:0 auto;padding:0 20px}
-header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
-.logo{font-family:Syne;font-weight:800;font-size:22px}
-.btn{background:var(--ameixa);color:#fff;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
-.hero{background:var(--rosa);border-radius:0 0 120px 0;padding:56px 44px;margin-bottom:60px;position:relative;overflow:hidden}
-.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--lilas);opacity:.5}
-h1{font-family:Syne;font-weight:800;font-size:clamp(40px,7vw,78px);line-height:.98;margin:0 0 20px;letter-spacing:-.02em;position:relative;z-index:1}
-.hero p{max-width:34ch;font-size:19px;margin:0 0 26px;position:relative;z-index:1}
-h2{font-family:Syne;font-weight:800;font-size:clamp(28px,4vw,42px);margin:0 0 24px;line-height:1.05}
-.lista{list-style:none;padding:0;margin:0 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
-.lista li{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #4a1d3f22;font-size:18px}
-.lista b{color:var(--ameixa)}
-.equipe{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:60px}
-.equipe div{background:#fff;border-radius:24px;padding:22px;text-align:center}
-.av{width:90px;height:90px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,var(--lilas),var(--rosa))}
-.equipe h3{margin:0;font-family:Syne}.equipe p{margin:4px 0 0;color:#7a5a72;font-size:15px}
-.agenda{background:var(--ameixa);color:#fff;border-radius:28px;padding:44px;text-align:center;margin-bottom:40px}
-.agenda .btn{background:var(--rosa);color:var(--ameixa)}
-footer{padding:20px 0 40px;font-size:15px;color:#7a5a72}
-@media(max-width:700px){.hero{padding:40px 22px;border-radius:0 0 60px 0}.lista{grid-template-columns:1fr}.equipe{grid-template-columns:1fr}.agenda{padding:32px 20px}}
+:root{--marfim:#F7F1EC;--tinta:#231A1E;--vinho:#6B2140;--rose:#E9C9CF;--cinza:#7A6A70;--linha:#E4D6D6}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.65 Jost,system-ui,sans-serif;color:var(--tinta);background:var(--marfim)}
+img{display:block;max-width:100%}a{color:inherit}
+.conceito{background:var(--tinta);color:#f1dfe3;font-size:12.5px;text-align:center;padding:6px 12px}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+.nav{display:flex;justify-content:space-between;align-items:center;height:76px}
+.logo{font-family:"Bodoni Moda",serif;font-size:26px;font-style:italic;text-decoration:none}
+nav{display:flex;gap:30px;font-size:15px;letter-spacing:.04em}nav a{text-decoration:none}
+.btn{display:inline-block;background:var(--vinho);color:#fff;padding:14px 26px;border-radius:999px;text-decoration:none;font-weight:500;letter-spacing:.02em;transition:background .25s}
+.btn:hover{background:#561a33}
+.btn.linha{background:transparent;color:var(--tinta);border:1px solid var(--tinta)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:48px;align-items:end;padding:36px 0 80px}
+h1{font-family:"Bodoni Moda",serif;font-weight:500;font-size:clamp(48px,7.4vw,104px);line-height:.95;letter-spacing:-.02em;margin:0 0 28px}
+h1 em{font-style:italic;font-weight:400;color:var(--vinho)}
+.hero p{font-size:19px;color:var(--cinza);max-width:38ch;margin:0 0 30px}
+.acoes{display:flex;gap:12px;flex-wrap:wrap}
+.fotos{position:relative;height:560px}
+.fotos img{position:absolute;object-fit:cover;border-radius:220px 220px 16px 16px}
+.fotos .a{width:68%;height:100%;right:0;top:0}
+.fotos .b{width:44%;height:52%;left:0;bottom:-30px;border-radius:16px;border:8px solid var(--marfim);will-change:transform}
+.etiqueta{position:absolute;left:8%;top:8%;background:#fff;border-radius:999px;padding:10px 18px;font-size:14px;box-shadow:0 12px 30px -12px #231a1e44}
+.etiqueta b{color:var(--vinho)}
+section{padding:110px 0}
+h2{font-family:"Bodoni Moda",serif;font-weight:500;font-size:clamp(38px,5vw,64px);line-height:1;margin:0 0 16px;letter-spacing:-.01em}
+h2 em{font-style:italic;font-weight:400}
+.sub{color:var(--cinza);max-width:48ch;margin:0 0 48px}
+.menu{display:grid;grid-template-columns:repeat(3,1fr);gap:0 56px}
+.menu h3{font-family:"Bodoni Moda";font-style:italic;font-weight:500;font-size:24px;margin:0 0 8px;padding-bottom:12px;border-bottom:1px solid var(--tinta)}
+.menu li{display:flex;justify-content:space-between;padding:12px 0;border-bottom:1px solid var(--linha);font-size:16px}
+.menu ul{list-style:none;padding:0;margin:0 0 30px}
+.menu li span{color:var(--vinho);font-weight:500}
+.galeria{display:grid;grid-template-columns:1.4fr 1fr;gap:18px}
+.galeria img{width:100%;height:440px;object-fit:cover;border-radius:16px}
+.galeria div{display:flex;flex-direction:column;justify-content:center;background:var(--rose);border-radius:16px;padding:44px}
+.equipe{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.equipe figure{margin:0}
+.equipe .av{aspect-ratio:3/4;border-radius:200px 200px 14px 14px;background:linear-gradient(160deg,var(--rose),#cfa3ad);display:grid;place-items:center;font-family:"Bodoni Moda";font-style:italic;font-size:64px;color:#fff}
+.equipe figcaption{padding-top:14px}.equipe b{font-family:"Bodoni Moda";font-size:22px;font-weight:500}.equipe small{display:block;color:var(--cinza)}
+.agenda{background:var(--vinho);color:#fff;border-radius:24px;padding:72px 56px;text-align:center}
+.agenda h2{color:#fff}.agenda p{opacity:.85;margin:0 0 28px}
+.agenda .btn{background:#fff;color:var(--vinho)}
+footer{padding:36px 0;color:var(--cinza);font-size:14px}
+.r{opacity:0;transform:translateY(24px);transition:opacity .9s,transform .9s cubic-bezier(.2,.8,.2,1)}.r.v{opacity:1;transform:none}
+@media(max-width:860px){nav{display:none}.hero,.galeria{grid-template-columns:1fr}.fotos{height:420px}.menu,.equipe{grid-template-columns:1fr}.agenda{padding:44px 24px}section{padding:70px 0}.galeria img{height:300px}}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none}}
 </style>
 </head>
 <body>
 <div class="conceito">Projeto conceito com empresa fictícia, feito por <a href="../../" target="_top">Jefferson Privino</a></div>
-<div class="w"><header><div class="logo">Studio Iracema</div><a class="btn" href="#a">Agendar</a></header></div>
-<div class="w"><div class="hero"><h1>Cabelo, unhas e sobrancelha no mesmo lugar.</h1><p>Salão na Varjota com horário marcado, sem espera. Agende pelo WhatsApp em 1 minuto.</p><a class="btn" href="#a">Ver horários livres</a></div></div>
-<div class="w">
-<h2>Serviços e preços</h2>
-<ul class="lista">
-  <li>Corte feminino<b>R$ 90</b></li><li>Escova<b>R$ 55</b></li>
-  <li>Coloração<b>a partir de R$ 180</b></li><li>Mechas<b>a partir de R$ 350</b></li>
-  <li>Manicure e pedicure<b>R$ 60</b></li><li>Design de sobrancelha<b>R$ 45</b></li>
-</ul>
-<h2>Equipe</h2>
-<div class="equipe">
-  <div><div class="av"></div><h3>Lia</h3><p>Coloração e mechas</p></div>
-  <div><div class="av"></div><h3>Rafa</h3><p>Corte e escova</p></div>
-  <div><div class="av"></div><h3>Bia</h3><p>Unhas e sobrancelha</p></div>
+<div class="w nav"><a class="logo" href="#">Studio Iracema</a><nav><a href="#servicos">Serviços</a><a href="#equipe">Equipe</a><a href="#agenda">Agenda</a></nav><a class="btn" href="#agenda">Agendar</a></div>
+<main>
+<div class="w hero">
+  <div>
+    <h1>Cabelo, unhas e <em>tempo para você</em>.</h1>
+    <p>Salão na Varjota com hora marcada e sem espera. Escolha o serviço, a profissional e o horário em um minuto.</p>
+    <div class="acoes"><a class="btn" href="#agenda">Ver horários livres</a><a class="btn linha" href="#servicos">Serviços e preços</a></div>
+  </div>
+  <div class="fotos">
+    <img class="a" src="https://images.unsplash.com/photo-1522337360788-8b13dee7a37e?w=900&q=75&auto=format" alt="Cliente com cabelo longo e escovado">
+    <img class="b" data-par src="https://images.unsplash.com/photo-1604654894610-df63bc536371?w=700&q=75&auto=format" alt="Unhas decoradas">
+    <div class="etiqueta">Hoje: <b>3 horários</b> livres</div>
+  </div>
 </div>
-<div class="agenda" id="a"><h2>Tem horário amanhã</h2><p>Terça a sábado, das 9h às 19h.</p><a class="btn" href="#">Agendar pelo WhatsApp</a></div>
-<footer>Studio Iracema · Varjota, Fortaleza · (85) 0000-0000</footer>
-</div>
+
+<section id="servicos" style="padding-top:60px"><div class="w">
+  <h2 class="r">Serviços <em>e preços</em></h2><p class="sub r">Preço fechado, combinado antes. Sem taxa surpresa no caixa.</p>
+  <div class="menu r">
+    <div><h3>Cabelo</h3><ul><li>Corte feminino<span>R$ 90</span></li><li>Escova<span>R$ 55</span></li><li>Hidratação<span>R$ 80</span></li></ul></div>
+    <div><h3>Cor</h3><ul><li>Coloração<span>R$ 180+</span></li><li>Mechas<span>R$ 350+</span></li><li>Tonalizante<span>R$ 120</span></li></ul></div>
+    <div><h3>Mãos e olhar</h3><ul><li>Manicure e pedicure<span>R$ 60</span></li><li>Unha em gel<span>R$ 140</span></li><li>Sobrancelha<span>R$ 45</span></li></ul></div>
+  </div>
+</div></section>
+
+<section style="padding-top:0"><div class="w galeria r">
+  <img src="https://images.unsplash.com/photo-1521590832167-7bcbfaa6381f?w=1100&q=75&auto=format" alt="Interior do salão com cadeiras rosas" loading="lazy">
+  <div><h2>Um lugar <em>calmo</em>.</h2><p class="sub" style="margin:0">Café, wi-fi e uma cadeira confortável. Quatro estações, para nunca ficar cheio demais.</p></div>
+</div></section>
+
+<section id="equipe" style="padding-top:0"><div class="w">
+  <h2 class="r">Quem <em>cuida de você</em></h2><p class="sub r">Fotos da equipe entram aqui no site do seu salão.</p>
+  <div class="equipe r">
+    <figure><div class="av">L</div><figcaption><b>Lia</b><small>Coloração e mechas</small></figcaption></figure>
+    <figure><div class="av">R</div><figcaption><b>Rafa</b><small>Corte e escova</small></figcaption></figure>
+    <figure><div class="av">B</div><figcaption><b>Bia</b><small>Unhas e sobrancelha</small></figcaption></figure>
+  </div>
+</div></section>
+
+<section id="agenda" style="padding-top:0"><div class="w"><div class="agenda r">
+  <h2>Tem horário <em>amanhã</em>.</h2><p>Terça a sábado, das 9h às 19h.</p><a class="btn" href="#">Agendar pelo WhatsApp</a>
+</div></div></section>
+</main>
+<footer class="w">Studio Iracema · Varjota, Fortaleza · (85) 0000-0000</footer>
+<script>
+(function(){var els=document.querySelectorAll('.r'),reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!('IntersectionObserver'in window)||reduz){els.forEach(function(e){e.classList.add('v')})}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+var p=document.querySelector('[data-par]');if(p&&!reduz)addEventListener('scroll',function(){p.style.transform='translate3d(0,'+(scrollY*-.12)+'px,0)'},{passive:true})})();
+</script>
 </body></html>

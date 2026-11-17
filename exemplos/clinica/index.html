@@ -2,82 +2,128 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Odonto Maré · Clínica odontológica em Fortaleza (projeto conceito)</title>
+<title>Odonto Maré · Clínica odontológica na Aldeota (projeto conceito)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Schibsted+Grotesk:ital,wght@0,400;0,500;0,700;0,800;1,500&display=swap" rel="stylesheet">
 <style>
-:root{--agua:#E6F4F1;--verde:#0E7C6B;--verde-esc:#0A4D44;--tinta:#13302C;--cinza:#5C716D;--branco:#fff;--coral:#FF8A6B}
-*{box-sizing:border-box}body{margin:0;font:400 17px/1.6 Manrope,system-ui,sans-serif;color:var(--tinta);background:var(--branco)}
-.conceito{background:var(--tinta);color:#fff;font-size:13px;text-align:center;padding:6px}
-.conceito a{color:#9FE3D6}
-.w{max-width:1140px;margin:0 auto;padding:0 22px}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo{font-weight:800;font-size:22px;display:flex;gap:10px;align-items:center}
-.logo i{width:34px;height:34px;border-radius:50% 50% 50% 8px;background:var(--verde);display:block}
-nav{display:flex;gap:26px;font-weight:600;font-size:15px}nav a{text-decoration:none;color:inherit}
-.cta{background:var(--verde);color:#fff;text-decoration:none;padding:13px 22px;border-radius:999px;font-weight:700;display:inline-block}
-.hero{background:var(--agua);border-radius:28px;padding:64px 56px;display:grid;grid-template-columns:1.2fr .8fr;gap:40px;align-items:center}
-h1{font-size:clamp(38px,5.4vw,64px);line-height:1.04;letter-spacing:-.03em;margin:0 0 20px;font-weight:800}
-.hero p{font-size:19px;color:var(--cinza);max-width:40ch;margin:0 0 28px}
-.cartao{background:#fff;border-radius:22px;padding:28px;box-shadow:0 20px 50px -25px #0e7c6b66}
-.cartao h3{margin:0 0 6px}
-.horario{display:flex;justify-content:space-between;border-bottom:1px solid #e3ece9;padding:10px 0;font-size:15px}
-.nota{display:flex;align-items:center;gap:12px;margin-top:18px;font-weight:700}
-.nota b{font-size:32px;color:var(--verde)}
-section{padding:80px 0}
-h2{font-size:clamp(30px,4vw,44px);letter-spacing:-.02em;margin:0 0 30px;line-height:1.1}
-.serv{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
-.serv div{border:1px solid #dbe9e5;border-radius:20px;padding:26px}
-.serv h3{margin:0 0 6px;font-size:20px}.serv p{margin:0;color:var(--cinza);font-size:15px}
-.serv span{display:inline-block;margin-top:14px;font-weight:700;color:var(--verde)}
-.conv{background:var(--verde-esc);color:#fff;border-radius:28px;padding:50px;display:flex;flex-wrap:wrap;gap:30px;justify-content:space-between;align-items:center}
-.conv ul{list-style:none;padding:0;margin:0;display:flex;flex-wrap:wrap;gap:10px}
-.conv li{border:1px solid #ffffff44;border-radius:999px;padding:8px 16px;font-weight:600}
-.dep{display:grid;grid-template-columns:1fr 1fr;gap:18px}
-.dep blockquote{margin:0;background:var(--agua);border-radius:20px;padding:28px;font-size:18px}
-.dep cite{display:block;margin-top:12px;font-style:normal;font-weight:700;font-size:15px;color:var(--cinza)}
-footer{border-top:1px solid #e3ece9;padding:40px 0;color:var(--cinza);font-size:15px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:16px}
-@media(max-width:800px){nav{display:none}.hero{grid-template-columns:1fr;padding:36px 24px}.serv,.dep{grid-template-columns:1fr}.conv{padding:32px 24px}}
+:root{--papel:#F6F8F7;--tinta:#0E1F1C;--cinza:#5B6B67;--verde:#0B6E5E;--menta:#CDEBE3;--linha:#DCE5E2}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 "Schibsted Grotesk",system-ui,sans-serif;color:var(--tinta);background:var(--papel);-webkit-font-smoothing:antialiased}
+img{display:block;max-width:100%}
+a{color:inherit}
+.conceito{background:var(--tinta);color:#cfe;font-size:12.5px;text-align:center;padding:6px 12px}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+header{position:sticky;top:0;z-index:10;background:color-mix(in srgb,var(--papel) 88%,transparent);backdrop-filter:blur(12px);border-bottom:1px solid var(--linha)}
+.nav{display:flex;justify-content:space-between;align-items:center;height:68px}
+.logo{font-weight:800;font-size:20px;letter-spacing:-.02em;text-decoration:none}
+.logo span{color:var(--verde)}
+nav{display:flex;gap:28px;font-weight:500;font-size:15px}nav a{text-decoration:none;color:var(--cinza)}nav a:hover{color:var(--tinta)}
+.btn{display:inline-flex;align-items:center;gap:8px;background:var(--verde);color:#fff;text-decoration:none;padding:13px 22px;border-radius:10px;font-weight:700;font-size:15px;transition:transform .2s,background .2s}
+.btn:hover{background:#085a4d;transform:translateY(-1px)}
+.btn.claro{background:#fff;color:var(--tinta);border:1px solid var(--linha)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:56px;align-items:center;padding:64px 0 72px}
+.kicker{display:inline-flex;gap:8px;align-items:center;font-size:14px;color:var(--verde);font-weight:700;margin-bottom:22px}
+.kicker i{width:8px;height:8px;border-radius:50%;background:#2BC48A;box-shadow:0 0 0 4px #2bc48a33}
+h1{font-size:clamp(40px,5.6vw,72px);line-height:1;letter-spacing:-.035em;margin:0 0 22px;font-weight:800}
+h1 em{font-style:italic;font-weight:500;color:var(--verde)}
+.hero p{font-size:19px;color:var(--cinza);max-width:42ch;margin:0 0 32px}
+.acoes{display:flex;gap:12px;flex-wrap:wrap}
+.foto{position:relative;border-radius:22px;overflow:hidden;aspect-ratio:4/5}
+.foto img{width:100%;height:100%;object-fit:cover;transform:scale(1.04);transition:transform 1.2s}
+.foto:hover img{transform:scale(1)}
+.cartao{position:absolute;left:20px;bottom:20px;right:20px;background:#fffffff0;backdrop-filter:blur(8px);border-radius:14px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:12px}
+.cartao b{font-size:28px;letter-spacing:-.03em}
+.cartao small{color:var(--cinza);display:block;font-size:13px}
+.faixa{display:grid;grid-template-columns:repeat(4,1fr);border-top:1px solid var(--linha);border-bottom:1px solid var(--linha)}
+.faixa div{padding:26px 24px;border-right:1px solid var(--linha)}.faixa div:last-child{border:0}
+.faixa b{display:block;font-size:30px;letter-spacing:-.03em}.faixa span{color:var(--cinza);font-size:14px}
+section{padding:96px 0}
+h2{font-size:clamp(32px,4vw,52px);letter-spacing:-.03em;line-height:1.05;margin:0 0 14px;font-weight:800}
+.sub{color:var(--cinza);max-width:52ch;margin:0 0 44px}
+.trat{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--linha);border:1px solid var(--linha);border-radius:18px;overflow:hidden}
+.trat a{background:#fff;padding:30px 28px;text-decoration:none;transition:background .25s}
+.trat a:hover{background:var(--menta)}
+.trat h3{margin:0 0 6px;font-size:21px;letter-spacing:-.01em}
+.trat p{margin:0 0 18px;color:var(--cinza);font-size:15px}
+.trat span{font-weight:700;color:var(--verde);font-size:15px}
+.dupla{display:grid;grid-template-columns:1.1fr .9fr;gap:56px;align-items:center}
+.dupla img{border-radius:22px;aspect-ratio:5/4;object-fit:cover;width:100%}
+.lista{list-style:none;padding:0;margin:28px 0 0}
+.lista li{padding:16px 0;border-top:1px solid var(--linha);display:flex;gap:14px}
+.lista li::before{content:"";flex:none;width:22px;height:22px;border-radius:50%;background:var(--menta) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24'%3E%3Cpath d='M6 12.5l4 4 8-9' fill='none' stroke='%230B6E5E' stroke-width='2.5' stroke-linecap='round'/%3E%3C/svg%3E") center/14px no-repeat;margin-top:2px}
+.conv{display:flex;flex-wrap:wrap;gap:10px;margin-top:28px}
+.conv span{border:1px solid var(--linha);background:#fff;border-radius:999px;padding:9px 16px;font-weight:500;font-size:15px}
+.dep{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.dep figure{margin:0;background:#fff;border:1px solid var(--linha);border-radius:18px;padding:28px}
+.dep blockquote{margin:0 0 18px;font-size:17px}
+.dep figcaption{color:var(--cinza);font-size:14px}
+.estrelas{color:#E7A91B;letter-spacing:2px;margin-bottom:12px}
+.cta{background:var(--tinta);color:#fff;border-radius:26px;padding:64px;display:grid;grid-template-columns:1.2fr .8fr;gap:30px;align-items:center}
+.cta h2{color:#fff}.cta p{color:#a9bbb6;margin:0}
+.cta .btn{background:#2BC48A;color:var(--tinta);justify-self:end}
+footer{padding:40px 0;color:var(--cinza);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+.r{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.r.v{opacity:1;transform:none}
+@media(max-width:860px){nav{display:none}.hero,.dupla,.cta{grid-template-columns:1fr}.foto{aspect-ratio:4/3}.faixa{grid-template-columns:1fr 1fr}.faixa div:nth-child(2){border-right:0}.trat,.dep{grid-template-columns:1fr}.cta{padding:36px 26px}.cta .btn{justify-self:start}section{padding:64px 0}}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none}*{transition:none!important}}
 </style>
 </head>
 <body>
 <div class="conceito">Projeto conceito com empresa fictícia, feito por <a href="../../" target="_top">Jefferson Privino</a></div>
-<div class="w">
-<header><div class="logo"><i></i>Odonto Maré</div><nav><a href="#s">Tratamentos</a><a href="#c">Convênios</a><a href="#d">Avaliações</a></nav><a class="cta" href="#">Agendar avaliação</a></header>
-<div class="hero">
+<header><div class="w nav"><a class="logo" href="#">Odonto<span>Maré</span></a><nav><a href="#trat">Tratamentos</a><a href="#clinica">A clínica</a><a href="#av">Avaliações</a></nav><a class="btn" href="#agendar">Agendar</a></div></header>
+<main>
+<div class="w hero">
   <div>
-    <h1>Sorriso cuidado sem pressa, na Aldeota.</h1>
-    <p>Clínica odontológica com atendimento para toda a família, horários à noite e aos sábados. Primeira avaliação gratuita.</p>
-    <a class="cta" href="#">Agendar pelo WhatsApp</a>
+    <div class="kicker"><i></i>Horários hoje até as 20h</div>
+    <h1>Dentista sem pressa, <em>sem susto</em>.</h1>
+    <p>Clínica na Aldeota para a família toda, com horário à noite e aos sábados. A primeira avaliação é por nossa conta.</p>
+    <div class="acoes"><a class="btn" href="#agendar">Agendar avaliação grátis</a><a class="btn claro" href="#trat">Ver tratamentos</a></div>
   </div>
-  <div class="cartao">
-    <h3>Horários</h3>
-    <div class="horario"><span>Segunda a sexta</span><b>8h às 20h</b></div>
-    <div class="horario"><span>Sábado</span><b>8h às 13h</b></div>
-    <div class="horario"><span>Endereço</span><b>Av. Santos Dumont</b></div>
-    <div class="nota"><b>4,9</b> 312 avaliações no Google</div>
-  </div>
+  <div class="foto r"><img src="https://images.unsplash.com/photo-1629909613654-28e377c37b09?w=1100&q=75&auto=format" alt="Consultório odontológico claro e moderno">
+    <div class="cartao"><div><b>4,9</b><small>312 avaliações no Google</small></div><div class="estrelas">★★★★★</div></div></div>
 </div>
-<section id="s">
-  <h2>Tratamentos</h2>
-  <div class="serv">
-    <div><h3>Clareamento</h3><p>Em consultório ou caseiro, com acompanhamento.</p><span>a partir de R$ 690</span></div>
-    <div><h3>Implantes</h3><p>Planejamento digital e parcelamento em até 12x.</p><span>avaliação gratuita</span></div>
-    <div><h3>Ortodontia</h3><p>Aparelho fixo, estético ou alinhadores.</p><span>a partir de R$ 150/mês</span></div>
-    <div><h3>Limpeza</h3><p>Profilaxia e aplicação de flúor em 40 minutos.</p><span>a partir de R$ 180</span></div>
-    <div><h3>Odontopediatria</h3><p>Consultório pensado para crianças.</p><span>atende convênios</span></div>
-    <div><h3>Lentes de contato</h3><p>Facetas em resina ou porcelana.</p><span>sob avaliação</span></div>
+<div class="w"><div class="faixa r"><div><b>12 anos</b><span>na Aldeota</span></div><div><b>Até 12x</b><span>no cartão</span></div><div><b>Sábados</b><span>das 8h às 13h</span></div><div><b>5 convênios</b><span>aceitos</span></div></div></div>
+
+<section id="trat"><div class="w">
+  <h2 class="r">Tratamentos</h2><p class="sub r">Preço de referência na tabela. O valor final sai na avaliação, que é gratuita.</p>
+  <div class="trat r">
+    <a href="#agendar"><h3>Clareamento</h3><p>No consultório ou com moldeira em casa.</p><span>a partir de R$ 690</span></a>
+    <a href="#agendar"><h3>Implantes</h3><p>Planejamento digital, sem surpresa no orçamento.</p><span>avaliação grátis</span></a>
+    <a href="#agendar"><h3>Alinhadores</h3><p>Aparelho transparente, troca a cada 15 dias.</p><span>a partir de R$ 290/mês</span></a>
+    <a href="#agendar"><h3>Limpeza</h3><p>Profilaxia e flúor em 40 minutos.</p><span>a partir de R$ 180</span></a>
+    <a href="#agendar"><h3>Odontopediatria</h3><p>Primeira consulta com tempo para a criança se acostumar.</p><span>atende convênios</span></a>
+    <a href="#agendar"><h3>Lentes e facetas</h3><p>Resina ou porcelana, com prova antes.</p><span>sob avaliação</span></a>
   </div>
-</section>
-<div class="conv" id="c"><h2 style="margin:0">Atendemos convênios</h2><ul><li>Amil Dental</li><li>OdontoPrev</li><li>Hapvida</li><li>SulAmérica</li><li>Bradesco Dental</li></ul></div>
-<section id="d">
-  <h2>O que dizem os pacientes</h2>
-  <div class="dep">
-    <blockquote>“Tenho pavor de dentista e saí tranquila. Explicaram cada etapa antes de começar.”<cite>Paciente, avaliação no Google</cite></blockquote>
-    <blockquote>“Consegui horário depois do trabalho e o implante ficou perfeito.”<cite>Paciente, avaliação no Google</cite></blockquote>
+</div></section>
+
+<section id="clinica" style="padding-top:0"><div class="w dupla">
+  <img class="r" src="https://images.unsplash.com/photo-1588776814546-1ffcf47267a5?w=1100&q=75&auto=format" alt="Dentista analisando radiografia" loading="lazy">
+  <div class="r">
+    <h2>Você vê tudo antes de começar.</h2>
+    <p class="sub" style="margin-bottom:0">Explicamos o plano com a radiografia na mão e o preço por escrito. Ninguém sai daqui com dúvida.</p>
+    <ul class="lista"><li>Raio-X digital na própria clínica</li><li>Orçamento por escrito, sem taxa extra depois</li><li>Lembrete da consulta pelo WhatsApp</li></ul>
+    <div class="conv"><span>Amil Dental</span><span>OdontoPrev</span><span>Hapvida</span><span>SulAmérica</span><span>Bradesco Dental</span></div>
   </div>
-</section>
-<footer><span>Odonto Maré · Av. Santos Dumont, Aldeota, Fortaleza</span><span>(85) 0000-0000</span></footer>
-</div>
+</div></section>
+
+<section id="av" style="padding-top:0"><div class="w">
+  <h2 class="r">O que os pacientes dizem</h2><p class="sub r">Avaliações reais do Google aparecem aqui no site do seu negócio.</p>
+  <div class="dep r">
+    <figure><div class="estrelas">★★★★★</div><blockquote>“Tenho pavor de dentista e saí tranquila. Explicaram cada etapa antes de começar.”</blockquote><figcaption>Paciente desde 2021</figcaption></figure>
+    <figure><div class="estrelas">★★★★★</div><blockquote>“Consegui horário depois do trabalho e o implante ficou perfeito.”</blockquote><figcaption>Paciente de implante</figcaption></figure>
+    <figure><div class="estrelas">★★★★★</div><blockquote>“Meu filho pede para voltar. Isso diz tudo.”</blockquote><figcaption>Mãe de paciente</figcaption></figure>
+  </div>
+</div></section>
+
+<section id="agendar" style="padding-top:0"><div class="w"><div class="cta r">
+  <div><h2>Sua avaliação é grátis.</h2><p>Responda 3 perguntas no WhatsApp e escolha o horário.</p></div>
+  <a class="btn" href="#">Agendar pelo WhatsApp</a>
+</div></div></section>
+</main>
+<footer class="w"><span>Odonto Maré · Av. Santos Dumont, Aldeota, Fortaleza</span><span>CRO-CE (exemplo) · (85) 0000-0000</span></footer>
+<script>
+(function(){var els=document.querySelectorAll('.r');if(!('IntersectionObserver'in window)||matchMedia('(prefers-reduced-motion: reduce)').matches){els.forEach(function(e){e.classList.add('v')});return}
+var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)});
+setTimeout(function(){els.forEach(function(e){if(e.getBoundingClientRect().top<innerHeight)e.classList.add('v')})},50)})();
+</script>
 </body></html>

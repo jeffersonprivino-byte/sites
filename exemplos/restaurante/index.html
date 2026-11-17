@@ -2,63 +2,99 @@
 <html lang="pt-BR">
 <head>
 <meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Cantina do Mucuripe · Frutos do mar em Fortaleza (projeto conceito)</title>
+<title>Cantina do Mucuripe · Frutos do mar na Beira-Mar (projeto conceito)</title>
 <meta name="robots" content="noindex">
 <link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Young+Serif&family=Karla:wght@400;600;700&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Caprasimo&family=Work+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
-:root{--mata:#1E3A2F;--mostarda:#E2A22B;--papel:#FBF4E4;--tinta:#22201B;--vinho:#8C2F23}
-*{box-sizing:border-box}body{margin:0;font:400 17px/1.6 Karla,system-ui,sans-serif;color:var(--tinta);background:var(--papel)}
-.conceito{background:var(--tinta);color:#fff;font-size:13px;text-align:center;padding:6px}.conceito a{color:var(--mostarda)}
-.w{max-width:1140px;margin:0 auto;padding:0 22px}
-.topo{background:var(--mata);color:var(--papel)}
-header{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
-.logo{font-family:"Young Serif",serif;font-size:24px}
-nav{display:flex;gap:24px;font-weight:600}nav a{color:inherit;text-decoration:none}
-.btn{background:var(--mostarda);color:var(--tinta);padding:13px 22px;border-radius:6px;font-weight:700;text-decoration:none;display:inline-block}
-.hero{padding:70px 0 90px;display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:end}
-h1{font-family:"Young Serif",serif;font-weight:400;font-size:clamp(42px,6.4vw,82px);line-height:1;margin:0 0 22px;letter-spacing:-.01em}
-.hero p{font-size:20px;opacity:.85;max-width:38ch;margin:0 0 28px}
-.prato{aspect-ratio:1;border-radius:50%;background:radial-gradient(circle at 50% 50%,#f6e3b7 0 30%,#d98d3a 31% 38%,#f2d39a 39% 52%,#fff 53% 60%,#e8e1d0 61%);box-shadow:0 30px 60px -20px #000a;position:relative}
-.prato::after{content:"Moqueca da casa";position:absolute;bottom:8%;left:50%;transform:translateX(-50%);background:var(--vinho);color:#fff;padding:6px 14px;border-radius:999px;font-weight:700;font-size:14px;white-space:nowrap}
-.info{display:grid;grid-template-columns:repeat(3,1fr);background:var(--mostarda);border-radius:10px;margin-top:-34px;position:relative}
-.info div{padding:20px 24px;border-right:1px solid #0002}.info div:last-child{border:0}
-.info small{display:block;font-weight:700;font-size:13px;opacity:.7}.info b{font-size:18px}
-section{padding:80px 0}
-h2{font-family:"Young Serif",serif;font-weight:400;font-size:clamp(32px,4.4vw,50px);margin:0 0 30px;line-height:1.1}
-.cardapio{display:grid;grid-template-columns:1fr 1fr;gap:10px 60px}
-.item{display:flex;align-items:baseline;gap:10px;padding:14px 0;border-bottom:1px dashed #22201b44}
-.item b{font-size:19px}.item span{flex:1;border-bottom:1px dotted #22201b55;transform:translateY(-5px)}.item em{font-style:normal;font-weight:700;color:var(--vinho)}
-.item small{display:block;color:#6b6457;font-size:14px}
-.reserva{background:var(--vinho);color:#fff;border-radius:14px;padding:50px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap}
-.reserva h2{margin:0}
-footer{padding:40px 0;font-size:15px;color:#6b6457}
-@media(max-width:820px){nav{display:none}.hero{grid-template-columns:1fr}.prato{max-width:300px}.info,.cardapio{grid-template-columns:1fr}.info div{border-right:0;border-bottom:1px solid #0002}.reserva{padding:32px 24px}}
+:root{--areia:#FBF3E6;--tinta:#1D1A16;--mar:#0F4C5C;--coral:#E8553B;--sol:#F2B33D;--cinza:#6E655A}
+*{box-sizing:border-box}html{scroll-behavior:smooth}
+body{margin:0;font:400 17px/1.6 "Work Sans",system-ui,sans-serif;color:var(--tinta);background:var(--areia)}
+img{display:block;max-width:100%}a{color:inherit}
+.conceito{background:var(--tinta);color:#f5e6cc;font-size:12.5px;text-align:center;padding:6px 12px}
+.w{max-width:1200px;margin:0 auto;padding:0 24px}
+.hero{position:relative;min-height:88vh;display:flex;flex-direction:column;color:#fff;overflow:hidden}
+.hero .bg{position:absolute;inset:-8% 0 0 0;background:url("https://images.unsplash.com/photo-1559339352-11d035aa65de?w=1800&q=75&auto=format") center/cover;will-change:transform}
+.hero::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,#0006 0%,#0002 40%,#000a 100%)}
+.hero>*{position:relative;z-index:1}
+.nav{display:flex;justify-content:space-between;align-items:center;padding:22px 0}
+.logo{font-family:Caprasimo,serif;font-size:26px;text-decoration:none}
+nav{display:flex;gap:26px;font-weight:600}nav a{text-decoration:none;opacity:.9}
+.btn{display:inline-block;background:var(--sol);color:var(--tinta);padding:14px 24px;border-radius:999px;font-weight:700;text-decoration:none;transition:transform .2s}
+.btn:hover{transform:translateY(-2px) rotate(-1deg)}
+.btn.borda{background:transparent;color:#fff;border:2px solid #fff}
+.hero .conteudo{margin-top:auto;padding-bottom:64px}
+h1{font-family:Caprasimo,serif;font-weight:400;font-size:clamp(46px,8vw,112px);line-height:.92;margin:0 0 22px;letter-spacing:-.01em;max-width:11ch}
+.hero p{font-size:20px;max-width:40ch;margin:0 0 28px;opacity:.95}
+.hero .acoes{display:flex;gap:12px;flex-wrap:wrap}
+.selo{position:absolute;right:6%;bottom:12%;width:150px;height:150px;border-radius:50%;background:var(--coral);display:grid;place-items:center;text-align:center;font-family:Caprasimo;font-size:18px;line-height:1.05;transform:rotate(12deg);animation:gira 18s linear infinite}
+@keyframes gira{to{transform:rotate(372deg)}}
+.info{background:var(--mar);color:#fff}
+.info .w{display:grid;grid-template-columns:repeat(3,1fr)}
+.info div div{padding:24px 0}
+.info small{display:block;opacity:.7;font-size:13px;font-weight:600;letter-spacing:.02em}
+.info b{font-size:18px}
+section{padding:96px 0}
+h2{font-family:Caprasimo,serif;font-weight:400;font-size:clamp(36px,5vw,64px);line-height:1;margin:0 0 16px}
+.sub{color:var(--cinza);max-width:50ch;margin:0 0 44px}
+.pratos{display:grid;grid-template-columns:1.3fr 1fr 1fr;gap:18px}
+.prato{position:relative;border-radius:20px;overflow:hidden;min-height:360px;color:#fff;display:flex;align-items:flex-end}
+.prato img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .9s}
+.prato:hover img{transform:scale(1.06)}
+.prato::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 40%,#000c)}
+.prato div{position:relative;z-index:1;padding:22px}
+.prato h3{font-family:Caprasimo;font-weight:400;font-size:26px;margin:0}
+.prato span{background:var(--sol);color:var(--tinta);font-weight:700;border-radius:999px;padding:4px 12px;font-size:14px;display:inline-block;margin-top:8px}
+.cardapio{display:grid;grid-template-columns:1fr 1fr;gap:0 64px;margin-top:56px}
+.item{display:flex;align-items:baseline;gap:10px;padding:16px 0;border-bottom:1px solid #1d1a1622}
+.item b{font-size:18px;font-weight:600}.item small{display:block;color:var(--cinza);font-size:14px}
+.item i{flex:1;border-bottom:2px dotted #1d1a1633;transform:translateY(-5px)}
+.item em{font-style:normal;font-weight:700;color:var(--coral)}
+.reserva{background:var(--coral);color:#fff;border-radius:28px;padding:64px;display:flex;justify-content:space-between;align-items:center;gap:30px;flex-wrap:wrap;position:relative;overflow:hidden}
+.reserva h2{margin:0;max-width:12ch}
+.reserva::before{content:"";position:absolute;width:340px;height:340px;border-radius:50%;border:40px solid #ffffff1f;right:-80px;top:-120px}
+footer{padding:36px 0;color:var(--cinza);font-size:14px}
+.r{opacity:0;transform:translateY(24px);transition:opacity .8s,transform .8s cubic-bezier(.2,.8,.2,1)}.r.v{opacity:1;transform:none}
+@media(max-width:860px){nav{display:none}.selo{display:none}.info .w,.pratos,.cardapio{grid-template-columns:1fr}.reserva{padding:36px 26px}section{padding:64px 0}.hero{min-height:78vh}}
+@media(prefers-reduced-motion:reduce){.r{opacity:1;transform:none}.selo{animation:none}}
 </style>
 </head>
 <body>
 <div class="conceito">Projeto conceito com empresa fictícia, feito por <a href="../../" target="_top">Jefferson Privino</a></div>
-<div class="topo"><div class="w">
-<header><div class="logo">Cantina do Mucuripe</div><nav><a href="#m">Cardápio</a><a href="#r">Reservas</a><a href="#">Delivery</a></nav><a class="btn" href="#r">Reservar mesa</a></header>
 <div class="hero">
-  <div><h1>Peixe que chegou hoje cedo da jangada.</h1><p>Frutos do mar na beira da praia do Mucuripe desde 1998. Almoço todos os dias e jantar de quinta a domingo.</p><a class="btn" href="#m">Ver cardápio</a></div>
-  <div class="prato" role="img" aria-label="Ilustração de um prato de moqueca"></div>
-</div>
-</div></div>
-<div class="w">
-<div class="info"><div><small>Almoço</small><b>11h às 16h, todos os dias</b></div><div><small>Jantar</small><b>18h às 23h, qui a dom</b></div><div><small>Delivery</small><b>iFood e WhatsApp</b></div></div>
-<section id="m">
-  <h2>Cardápio</h2>
-  <div class="cardapio">
-    <div class="item"><div><b>Moqueca de arraia</b><small>Leite de coco, pirão e arroz. Serve 2</small></div><span></span><em>R$ 129</em></div>
-    <div class="item"><div><b>Peixe ao molho de camarão</b><small>Pescada amarela, purê e arroz</small></div><span></span><em>R$ 98</em></div>
-    <div class="item"><div><b>Caranguejo</b><small>Toda quinta, com pirão</small></div><span></span><em>R$ 12 un.</em></div>
-    <div class="item"><div><b>Camarão no alho e óleo</b><small>Porção de 400 g</small></div><span></span><em>R$ 79</em></div>
-    <div class="item"><div><b>Baião de dois da casa</b><small>Com queijo coalho e nata</small></div><span></span><em>R$ 54</em></div>
-    <div class="item"><div><b>Cocada de forno</b><small>Com sorvete de tapioca</small></div><span></span><em>R$ 22</em></div>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="w nav"><a class="logo" href="#">Cantina do Mucuripe</a><nav><a href="#pratos">Cardápio</a><a href="#reserva">Reservas</a><a href="#">Delivery</a></nav><a class="btn" href="#reserva">Reservar</a></div>
+  <div class="w conteudo">
+    <h1>O peixe chegou hoje cedo.</h1>
+    <p>Frutos do mar de frente para o Mucuripe desde 1998. Almoço todo dia, jantar de quinta a domingo.</p>
+    <div class="acoes"><a class="btn" href="#pratos">Ver o cardápio</a><a class="btn borda" href="#reserva">Reservar mesa</a></div>
   </div>
-</section>
-<div class="reserva" id="r"><h2>Mesa para o fim de semana?</h2><a class="btn" href="#">Reservar pelo WhatsApp</a></div>
-<footer>Cantina do Mucuripe · Av. Beira-Mar, Mucuripe, Fortaleza · (85) 0000-0000</footer>
+  <div class="selo" aria-hidden="true">pôr do sol<br>na varanda</div>
 </div>
+<div class="info"><div class="w"><div><small>ALMOÇO</small><b>11h às 16h, todo dia</b></div><div><small>JANTAR</small><b>18h às 23h, qui a dom</b></div><div><small>DELIVERY</small><b>iFood e WhatsApp</b></div></div></div>
+<main>
+<section id="pratos"><div class="w">
+  <h2 class="r">Os mais pedidos</h2><p class="sub r">Tudo serve dois, e o pirão vem de cortesia.</p>
+  <div class="pratos r">
+    <div class="prato"><img src="https://images.unsplash.com/photo-1534080564583-6be75777b70a?w=1000&q=75&auto=format" alt="Panela de frutos do mar" loading="lazy"><div><h3>Mariscada da casa</h3><span>R$ 149</span></div></div>
+    <div class="prato"><img src="https://images.unsplash.com/photo-1519708227418-c8fd9a32b7a2?w=800&q=75&auto=format" alt="Peixe grelhado" loading="lazy"><div><h3>Pescada na brasa</h3><span>R$ 98</span></div></div>
+    <div class="prato"><img src="https://images.unsplash.com/photo-1414235077428-338989a2e8c0?w=800&q=75&auto=format" alt="Prato servido à mesa" loading="lazy"><div><h3>Menu do pôr do sol</h3><span>R$ 189 · 2 pessoas</span></div></div>
+  </div>
+  <div class="cardapio r">
+    <div class="item"><div><b>Moqueca de arraia</b><small>Leite de coco, pirão e arroz</small></div><i></i><em>R$ 129</em></div>
+    <div class="item"><div><b>Caranguejo</b><small>Toda quinta, com pirão</small></div><i></i><em>R$ 12 un.</em></div>
+    <div class="item"><div><b>Camarão alho e óleo</b><small>Porção de 400 g</small></div><i></i><em>R$ 79</em></div>
+    <div class="item"><div><b>Baião de dois</b><small>Com queijo coalho e nata</small></div><i></i><em>R$ 54</em></div>
+    <div class="item"><div><b>Cocada de forno</b><small>Com sorvete de tapioca</small></div><i></i><em>R$ 22</em></div>
+    <div class="item"><div><b>Caipirinha de cajá</b><small>A da casa</small></div><i></i><em>R$ 24</em></div>
+  </div>
+</div></section>
+<section id="reserva" style="padding-top:0"><div class="w"><div class="reserva r"><h2>Mesa na varanda no sábado?</h2><a class="btn" href="#">Reservar pelo WhatsApp</a></div></div></section>
+</main>
+<footer class="w">Cantina do Mucuripe · Av. Beira-Mar, Mucuripe, Fortaleza · (85) 0000-0000</footer>
+<script>
+(function(){var els=document.querySelectorAll('.r'),reduz=matchMedia('(prefers-reduced-motion: reduce)').matches;
+if(!('IntersectionObserver'in window)||reduz){els.forEach(function(e){e.classList.add('v')})}else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('v');io.unobserve(e.target)}})},{threshold:.12});els.forEach(function(e){io.observe(e)})}
+if(!reduz){var bg=document.querySelector('.hero .bg');addEventListener('scroll',function(){bg.style.transform='translate3d(0,'+(scrollY*.3)+'px,0)'},{passive:true})}})();
+</script>
 </body></html>
