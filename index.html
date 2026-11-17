@@ -161,11 +161,45 @@ section{padding:80px 0}
 .final p{color:#b9cad8;margin:12px 0 0}
 footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
+/* ===== Movimento: 3D, parallax e revelações ===== */
+.vitrine{perspective:1400px;transform-style:preserve-3d}
+.vitrine-palco{position:absolute;inset:0;transform-style:preserve-3d;transition:transform .5s cubic-bezier(.2,.7,.2,1);will-change:transform}
+.tela{transition:transform .6s cubic-bezier(.2,.7,.2,1),box-shadow .6s}
+.t1{transform:rotate(-2.5deg) translateZ(0)}
+.t2{transform:rotate(2deg) translateZ(60px)}
+.t3{transform:translateZ(120px)}
+.selo{transform:rotate(-10deg) translateZ(160px)}
+.hero h1 .linha{display:block;overflow:hidden}
+.hero h1 .linha span{display:block;transform:translateY(105%);animation:sobe .9s cubic-bezier(.2,.8,.2,1) forwards}
+.hero h1 .linha:nth-child(2) span{animation-delay:.08s}
+.hero h1 .linha:nth-child(3) span{animation-delay:.16s}
+@keyframes sobe{to{transform:none}}
+.hero .lead,.hero .acoes,.garantias{opacity:0;animation:aparece .8s .45s ease forwards}
+.vitrine{opacity:0;animation:entra 1.1s .25s cubic-bezier(.2,.8,.2,1) forwards}
+@keyframes aparece{to{opacity:1}}
+@keyframes entra{from{opacity:0;transform:translateY(40px) rotateX(12deg)}to{opacity:1;transform:none}}
+.revela{opacity:0;transform:translateY(28px);transition:opacity .8s ease,transform .8s cubic-bezier(.2,.8,.2,1)}
+.revela.visivel{opacity:1;transform:none}
+.passos li{transition-delay:calc(var(--i,0) * 90ms)}
+.pacote{transition:transform .35s cubic-bezier(.2,.8,.2,1),box-shadow .35s;transform-style:preserve-3d}
+.pacote:hover{box-shadow:0 30px 60px -30px #0f2a3d66}
+.exemplo .tela{transform-style:preserve-3d}
+.onda{position:absolute;inset:auto 0 -1px 0;height:60px;pointer-events:none}
+.processo{position:relative;overflow:hidden}
+.processo .brilho{position:absolute;width:520px;height:520px;border-radius:50%;background:radial-gradient(circle,#1F6FB2 0,transparent 65%);opacity:.55;top:-180px;right:-160px;will-change:transform;pointer-events:none}
+.processo .wrap{position:relative}
+.barra-progresso{position:fixed;top:0;left:0;height:3px;width:100%;background:var(--sol);transform-origin:0 50%;transform:scaleX(0);z-index:60}
+@media (prefers-reduced-motion:reduce){
+  .hero h1 .linha span,.hero .lead,.hero .acoes,.garantias,.vitrine{animation:none;opacity:1;transform:none}
+  .revela{opacity:1;transform:none}
+}
+@media (min-width:901px){.pacote.destaque.revela.visivel{transform:translateY(-12px)}}
 .zap-fixo{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--verde-zap);display:grid;place-items:center;box-shadow:0 10px 25px -6px #0f2a3d77}
 .zap-fixo svg{width:32px;height:32px}
 </style>
 </head>
 <body>
+<div class="barra-progresso" aria-hidden="true"></div>
 
 <div class="wrap">
   <header class="topo">
@@ -181,7 +215,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
   <main>
   <div class="hero">
     <div>
-      <h1>Seu negócio com site próprio em 5 dias.</h1>
+      <h1><span class="linha"><span>Seu negócio</span></span><span class="linha"><span>com site próprio</span></span><span class="linha"><span>em 5 dias.</span></span></h1>
       <p class="lead">Faço sites para pequenos negócios, com preço fechado e o número de ajustes combinado antes de começar. Você só paga a segunda metade quando aprovar.</p>
       <div class="acoes">
         <a class="btn btn-zap" data-zap href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg>Pedir orçamento no WhatsApp</a>
@@ -194,21 +228,22 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
       </ul>
     </div>
 
-    <div class="vitrine" aria-label="Exemplos de sites que eu fiz">
+    <div class="vitrine" aria-label="Exemplos de sites que eu fiz"><div class="vitrine-palco">
       <div class="tela t1"><div class="barra"><i></i><i></i><i></i><span>odontomare.com.br</span></div><div class="vp" data-w="1280"><iframe src="exemplos/clinica/" title="Exemplo: site de clínica odontológica" loading="lazy" tabindex="-1"></iframe></div></div>
       <div class="tela t2"><div class="barra"><i></i><i></i><i></i><span>cantinadomucuripe.com.br</span></div><div class="vp" data-w="1280"><iframe src="exemplos/restaurante/" title="Exemplo: site de restaurante" loading="lazy" tabindex="-1"></iframe></div></div>
       <div class="tela t3"><div class="vp" data-w="390"><iframe src="exemplos/salao/" title="Exemplo: site de salão de beleza no celular" loading="lazy" tabindex="-1"></iframe></div></div>
       <div class="selo"><span><strong>5 dias</strong>do briefing ao site no ar</span></div>
-    </div>
+    </div></div>
   </div>
   </main>
 </div>
 
 <section class="processo" id="como">
+  <div class="brilho" data-parallax="-0.25" aria-hidden="true"></div>
   <div class="wrap">
-    <h2 class="sec-titulo">Como funciona</h2>
-    <p class="sec-sub">Tudo pelo WhatsApp, sem reunião longa e sem você precisar entender de tecnologia.</p>
-    <ol class="passos">
+    <h2 class="sec-titulo revela">Como funciona</h2>
+    <p class="sec-sub revela">Tudo pelo WhatsApp, sem reunião longa e sem você precisar entender de tecnologia.</p>
+    <ol class="passos revela-filhos">
       <li><h3>Conversa</h3><p>Você me conta o que vende, para quem e manda fotos e logo. Leva uns 15 minutos.</p></li>
       <li><h3>Proposta e entrada</h3><p>Mando o pacote certo, o preço fechado e quantas rodadas de ajuste estão incluídas. Começo com 50% de entrada.</p></li>
       <li><h3>Prévia e ajustes</h3><p>Em até 3 dias você recebe o link da prévia e pede as mudanças, dentro das rodadas combinadas.</p></li>
@@ -219,10 +254,10 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section id="pacotes">
   <div class="wrap">
-    <h2 class="sec-titulo">Preço fechado, sem surpresa no fim</h2>
-    <p class="sec-sub">O que muda o preço é o tamanho do site e quantas rodadas de ajuste você quer. Tudo fica escrito na proposta antes de começar.</p>
+    <h2 class="sec-titulo revela">Preço fechado, sem surpresa no fim</h2>
+    <p class="sec-sub revela">O que muda o preço é o tamanho do site e quantas rodadas de ajuste você quer. Tudo fica escrito na proposta antes de começar.</p>
     <div class="pacotes">
-      <article class="pacote">
+      <article class="pacote revela">
         <h3>Essencial</h3>
         <p class="para">Para quem precisa aparecer no Google e receber contatos.</p>
         <div class="preco">R$ 597</div>
@@ -237,7 +272,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
         </ul>
         <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Quero saber mais sobre o pacote Essencial (R$ 597)." href="#">Quero o Essencial</a>
       </article>
-      <article class="pacote destaque">
+      <article class="pacote revela destaque">
         <h3>Profissional</h3>
         <p class="para">Para empresas que querem mostrar serviços, equipe e depoimentos.</p>
         <div class="preco">R$ 1.200</div>
@@ -252,7 +287,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
         </ul>
         <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Quero saber mais sobre o pacote Profissional (R$ 1.200)." href="#">Quero o Profissional</a>
       </article>
-      <article class="pacote">
+      <article class="pacote revela">
         <h3>Sob medida</h3>
         <p class="para">Agendamento online, catálogo de produtos, área do cliente ou app.</p>
         <div class="preco"><small>de</small> R$ 2.000 <small>a</small> R$ 3.000</div>
@@ -268,7 +303,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
         <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Tenho um projeto sob medida e quero um orçamento." href="#">Pedir orçamento</a>
       </article>
     </div>
-    <div class="regra">
+    <div class="regra revela">
       <p><strong>O que é uma rodada de ajustes?</strong> Você junta numa mensagem tudo o que quer mudar na prévia e eu faço de uma vez. Se precisar de mais rodadas além das do pacote, cada uma custa R$ 100. O domínio (.com.br, cerca de R$ 40 por ano) é registrado no seu nome.</p>
     </div>
   </div>
@@ -276,18 +311,18 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section id="exemplos" style="padding-top:20px">
   <div class="wrap">
-    <h2 class="sec-titulo">Exemplos</h2>
-    <p class="sec-sub">Clique para abrir e navegar como se fosse o seu cliente.</p>
+    <h2 class="sec-titulo revela">Exemplos</h2>
+    <p class="sec-sub revela">Clique para abrir e navegar como se fosse o seu cliente.</p>
     <div class="exemplos">
-      <a class="exemplo" href="exemplos/clinica/" target="_blank" rel="noopener">
+      <a class="exemplo revela" href="exemplos/clinica/" target="_blank" rel="noopener">
         <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Clínica odontológica</span></div><div class="vp" data-w="1280"><iframe src="exemplos/clinica/" title="Prévia: clínica" loading="lazy" tabindex="-1"></iframe></div></div>
         <h3>Clínica odontológica</h3><p>Essencial: serviços, convênios e agendamento pelo WhatsApp.</p>
       </a>
-      <a class="exemplo" href="exemplos/restaurante/" target="_blank" rel="noopener">
+      <a class="exemplo revela" href="exemplos/restaurante/" target="_blank" rel="noopener">
         <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Restaurante</span></div><div class="vp" data-w="1280"><iframe src="exemplos/restaurante/" title="Prévia: restaurante" loading="lazy" tabindex="-1"></iframe></div></div>
         <h3>Restaurante</h3><p>Profissional: cardápio, horários, reservas e delivery.</p>
       </a>
-      <a class="exemplo" href="exemplos/salao/" target="_blank" rel="noopener">
+      <a class="exemplo revela" href="exemplos/salao/" target="_blank" rel="noopener">
         <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Salão de beleza</span></div><div class="vp" data-w="1280"><iframe src="exemplos/salao/" title="Prévia: salão" loading="lazy" tabindex="-1"></iframe></div></div>
         <h3>Salão de beleza</h3><p>Essencial: serviços com preço, equipe e botão de agendar.</p>
       </a>
@@ -298,10 +333,10 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section style="padding-top:20px">
   <div class="wrap">
-    <div class="extras-bloco">
+    <div class="extras-bloco revela">
       <div>
-        <h2 class="sec-titulo" style="font-size:clamp(30px,3.8vw,44px)">Serviços rápidos</h2>
-        <p class="sec-sub" style="margin-bottom:0">Para quem precisa de resultado esta semana, ou como complemento do site.</p>
+        <h2 class="sec-titulo revela" style="font-size:clamp(30px,3.8vw,44px)">Serviços rápidos</h2>
+        <p class="sec-sub revela" style="margin-bottom:0">Para quem precisa de resultado esta semana, ou como complemento do site.</p>
         <p class="bf">Black Friday em 27/11: página de ofertas pronta em 48 horas, se fechar até 24/11.</p>
       </div>
       <ul class="extras">
@@ -316,10 +351,10 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section>
   <div class="wrap">
-    <div class="sobre">
+    <div class="sobre revela">
       <div class="ini" aria-hidden="true">JP</div>
       <div>
-        <h2 class="sec-titulo" style="font-size:clamp(30px,3.8vw,44px)">Quem vai fazer o seu site</h2>
+        <h2 class="sec-titulo revela" style="font-size:clamp(30px,3.8vw,44px)">Quem vai fazer o seu site</h2>
         <p>Sou o Jefferson, de Fortaleza. Trabalho com marketing e construo sites e aplicativos para a web. Um deles é o <a href="https://vistoria-ape.netlify.app" target="_blank" rel="noopener">Vistoria Apê</a>, um app gratuito para quem vai receber as chaves do apartamento.</p>
         <p>Atendo pelo WhatsApp, respondo no mesmo dia e falo sem tecniquês.</p>
       </div>
@@ -329,8 +364,8 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section id="duvidas" style="padding-top:0">
   <div class="wrap">
-    <h2 class="sec-titulo">Dúvidas comuns</h2>
-    <div class="faq" style="margin-top:30px">
+    <h2 class="sec-titulo revela">Dúvidas comuns</h2>
+    <div class="faq revela" style="margin-top:30px">
       <details><summary>Preciso pagar mensalidade?</summary><p>Não. A hospedagem é gratuita para sites desse porte. O único custo fixo é o domínio (.com.br), cerca de R$ 40 por ano, pago direto no Registro.br e no seu nome.</p></details>
       <details><summary>Como funciona o pagamento?</summary><p>50% por Pix para começar e 50% quando você aprovar a prévia, antes de o site ir para o ar.</p></details>
       <details><summary>E se eu quiser mudar algo depois de pronto?</summary><p>Ajustes pequenos nos primeiros 30 dias são por minha conta. Depois disso, ou para mudanças grandes, combinamos o valor antes.</p></details>
@@ -342,7 +377,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <section style="padding-top:0">
   <div class="wrap">
-    <div class="final">
+    <div class="final revela">
       <div>
         <h2>Vamos colocar o seu negócio na internet?</h2>
         <p>Me chama no WhatsApp e em poucos minutos te digo qual pacote faz sentido.</p>
@@ -376,6 +411,47 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
     });
   }
   escala(); addEventListener("resize", escala);
+})();
+</script>
+
+<script>
+(function(){
+  var reduz = matchMedia('(prefers-reduced-motion: reduce)').matches;
+  // Revelação ao rolar
+  var alvos = document.querySelectorAll('.revela, .revela-filhos > li');
+  document.querySelectorAll('.revela-filhos > li').forEach(function(li,i){li.classList.add('revela');li.style.setProperty('--i',i)});
+  document.querySelectorAll('.pacotes .pacote, .exemplos .exemplo').forEach(function(el,i){el.style.transitionDelay=(i%3*90)+'ms'});
+  if(reduz || !('IntersectionObserver' in window)){document.querySelectorAll('.revela').forEach(function(e){e.classList.add('visivel')});}
+  else{var io=new IntersectionObserver(function(es){es.forEach(function(e){if(e.isIntersecting){e.target.classList.add('visivel');io.unobserve(e.target)}})},{rootMargin:'0px 0px -8% 0px',threshold:.12});
+    document.querySelectorAll('.revela').forEach(function(e){io.observe(e)});}
+  if(reduz) return;
+  // Barra de progresso + parallax
+  var barra=document.querySelector('.barra-progresso'), par=document.querySelectorAll('[data-parallax]'),
+      t1=document.querySelector('.t1'), t2=document.querySelector('.t2'), t3=document.querySelector('.t3'), ticking=false;
+  function rolar(){
+    var y=scrollY, h=document.documentElement.scrollHeight-innerHeight;
+    barra.style.transform='scaleX('+(h>0?y/h:0)+')';
+    par.forEach(function(el){var r=el.parentElement.getBoundingClientRect();el.style.transform='translate3d(0,'+(r.top*parseFloat(el.dataset.parallax))+'px,0)'});
+    if(y<900){
+      t1.style.transform='rotate(-2.5deg) translate3d(0,'+(y*-.06)+'px,0)';
+      t2.style.transform='rotate(2deg) translate3d(0,'+(y*-.14)+'px,60px)';
+      t3.style.transform='translate3d(0,'+(y*-.24)+'px,120px)';
+    }
+    ticking=false;
+  }
+  addEventListener('scroll',function(){if(!ticking){requestAnimationFrame(rolar);ticking=true}},{passive:true}); rolar();
+  // Inclinação 3D da vitrine e dos cartões (só com mouse)
+  if(matchMedia('(hover: hover) and (pointer: fine)').matches){
+    var palco=document.querySelector('.vitrine-palco'), vit=document.querySelector('.vitrine');
+    vit.addEventListener('mousemove',function(e){var r=vit.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+      palco.style.transform='rotateY('+(x*14)+'deg) rotateX('+(-y*10)+'deg)'});
+    vit.addEventListener('mouseleave',function(){palco.style.transform=''});
+    document.querySelectorAll('.pacote, .exemplo .tela').forEach(function(c){
+      c.addEventListener('mousemove',function(e){var r=c.getBoundingClientRect(),x=(e.clientX-r.left)/r.width-.5,y=(e.clientY-r.top)/r.height-.5;
+        c.style.transform=(c.classList.contains('destaque')&&innerWidth>900?'translateY(-12px) ':'')+'perspective(900px) rotateY('+(x*7)+'deg) rotateX('+(-y*7)+'deg)'});
+      c.addEventListener('mouseleave',function(){c.style.transform=''});
+    });
+  }
 })();
 </script>
 </body>
