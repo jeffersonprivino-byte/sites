@@ -1,0 +1,382 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Jefferson Privino · Sites para pequenos negócios</title>
+<meta name="description" content="Site profissional para o seu negócio em até 5 dias, a partir de R$ 597. Preço fechado, número de ajustes combinado antes, 50% só na entrega. Atendo todo o Brasil, direto de Fortaleza.">
+<meta property="og:title" content="Seu negócio com site próprio em 5 dias">
+<meta property="og:description" content="A partir de R$ 597. Preço fechado e ajustes combinados antes de começar. Fale comigo no WhatsApp.">
+<meta property="og:image" content="https://jeffersonprivino-byte.github.io/sites/og.png">
+<meta property="og:type" content="website">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='14' fill='%23123E6B'/><text x='50%25' y='58%25' text-anchor='middle' font-family='Arial' font-weight='800' font-size='30' fill='%23FFC23D'>JP</text></svg>">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=Figtree:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bruma:#EAF2F5; --branco:#FFFFFF; --tinta:#0F2A3D; --tinta-2:#3E5668;
+  --mar:#123E6B; --mar-claro:#1F6FB2; --sol:#FFC23D; --verde-zap:#1FA855; --linha:#C9D9E2;
+  --r-sm:8px; --r-lg:22px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+@media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{animation:none!important;transition:none!important}}
+html,body{overflow-x:clip}
+body{margin:0;background:var(--bruma);color:var(--tinta);font:400 17px/1.6 Figtree,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+h1,h2,h3{font-family:"Bricolage Grotesque",Figtree,sans-serif;line-height:1.05;margin:0;letter-spacing:-.02em}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--sol);outline-offset:3px;border-radius:4px}
+.wrap{max-width:1160px;margin:0 auto;padding:0 20px}
+
+/* topo */
+.topo{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.marca{display:flex;align-items:center;gap:10px;font-weight:700;text-decoration:none}
+.marca b{display:grid;place-items:center;width:38px;height:38px;border-radius:10px;background:var(--mar);color:var(--sol);font-family:"Bricolage Grotesque";font-weight:800}
+.topo nav{display:flex;gap:22px;font-weight:600;font-size:15px}
+.topo nav a{text-decoration:none}
+.topo nav a:hover{color:var(--mar-claro)}
+@media (max-width:720px){.topo nav{display:none}}
+
+/* botões */
+.btn{display:inline-flex;align-items:center;gap:10px;padding:15px 24px;border-radius:999px;font-weight:700;text-decoration:none;font-size:17px;border:0;cursor:pointer}
+.btn-zap{background:var(--verde-zap);color:#fff}
+.btn-zap:hover{background:#178a45}
+.btn-zap svg{width:22px;height:22px}
+.btn-linha{border:2px solid var(--tinta);color:var(--tinta)}
+.btn-linha:hover{background:var(--tinta);color:#fff}
+
+/* hero */
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:40px;align-items:center;padding:40px 0 70px}
+.hero h1{font-size:clamp(44px,7vw,86px);font-weight:800}
+.hero p.lead{font-size:20px;color:var(--tinta-2);max-width:34ch;margin:22px 0 30px}
+.hero .acoes{display:flex;flex-wrap:wrap;gap:12px}
+.garantias{list-style:none;padding:0;margin:30px 0 0;display:flex;flex-wrap:wrap;gap:10px 22px;font-weight:600;font-size:15px}
+.garantias li{display:flex;align-items:center;gap:8px}
+.garantias li::before{content:"";width:10px;height:10px;border-radius:50%;background:var(--sol);box-shadow:0 0 0 3px #ffc23d55}
+
+/* vitrine ao vivo */
+.vitrine{position:relative;height:540px}
+.tela{position:absolute;background:#fff;border-radius:18px;overflow:hidden;box-shadow:0 30px 60px -20px #0f2a3d55;border:1px solid var(--linha)}
+.tela .barra{height:30px;background:#f3f6f8;display:flex;align-items:center;gap:6px;padding:0 12px;border-bottom:1px solid var(--linha);font-size:11px;color:var(--tinta-2)}
+.tela .barra i{width:9px;height:9px;border-radius:50%;background:#d5dde3}
+.tela .barra span{margin-left:8px;white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.tela .vp{position:relative;overflow:hidden}
+.tela iframe{border:0;transform-origin:0 0;pointer-events:none;position:absolute;top:0;left:0}
+.t1{width:78%;left:0;top:0;z-index:1;transform:rotate(-2.5deg)}
+.t1 .vp{height:300px}
+.t2{width:62%;right:0;top:150px;z-index:2;transform:rotate(2deg)}
+.t2 .vp{height:250px}
+.t3{width:36%;left:12%;top:300px;z-index:3;border-radius:26px;border:6px solid var(--tinta)}
+.t3 .barra{display:none}
+.t3 .vp{height:300px}
+.selo{position:absolute;z-index:4;right:4%;bottom:10px;background:var(--sol);color:var(--tinta);border-radius:50%;width:132px;height:132px;display:grid;place-items:center;text-align:center;font-family:"Bricolage Grotesque";font-weight:800;font-size:15px;line-height:1.1;transform:rotate(-10deg);padding:14px}
+.selo strong{display:block;font-size:30px}
+@media (max-width:900px){
+  .hero{grid-template-columns:1fr;padding-top:10px}
+  .vitrine{height:430px}
+  .t1 .vp{height:230px}.t2{top:120px}.t2 .vp{height:200px}.t3{top:220px}.t3 .vp{height:200px}
+  .selo{width:110px;height:110px;font-size:13px}.selo strong{font-size:24px}
+}
+
+/* seções */
+section{padding:80px 0}
+.sec-titulo{font-size:clamp(34px,4.6vw,54px);font-weight:800;max-width:18ch}
+.sec-sub{color:var(--tinta-2);font-size:19px;max-width:52ch;margin:16px 0 44px}
+
+/* processo */
+.processo{background:var(--mar);color:#fff}
+.processo .sec-sub{color:#c6d8ea}
+.passos{display:grid;grid-template-columns:repeat(4,1fr);gap:0;counter-reset:p;list-style:none;padding:0;margin:0}
+.passos li{padding:26px 26px 26px 0;border-top:2px solid #ffffff33;position:relative}
+.passos li::before{counter-increment:p;content:counter(p);display:grid;place-items:center;width:44px;height:44px;border-radius:50%;background:var(--sol);color:var(--tinta);font-family:"Bricolage Grotesque";font-weight:800;font-size:20px;margin:-49px 0 18px}
+.passos h3{font-size:24px;margin-bottom:8px}
+.passos p{margin:0;color:#c6d8ea}
+@media (max-width:820px){.passos{grid-template-columns:1fr 1fr;row-gap:40px}}
+@media (max-width:520px){.passos{grid-template-columns:1fr}}
+
+/* pacotes */
+.pacotes{display:grid;grid-template-columns:1fr 1.08fr 1fr;gap:18px;align-items:stretch}
+.pacote{background:#fff;border:1px solid var(--linha);border-radius:var(--r-lg);padding:30px 28px;display:flex;flex-direction:column}
+.pacote.destaque{background:var(--tinta);color:#fff;border-color:var(--tinta);transform:translateY(-12px)}
+.pacote h3{font-size:28px}
+.pacote .para{color:var(--tinta-2);margin:6px 0 18px;font-size:16px}
+.pacote.destaque .para{color:#b9cad8}
+.preco{font-family:"Bricolage Grotesque";font-weight:800;font-size:46px;letter-spacing:-.03em;line-height:1}
+.preco small{font-size:16px;font-weight:600;letter-spacing:0}
+.parcela{font-size:15px;margin:6px 0 20px;color:var(--tinta-2)}
+.pacote.destaque .parcela{color:#b9cad8}
+.pacote ul{list-style:none;padding:0;margin:0 0 26px;flex:1}
+.pacote li{padding:9px 0 9px 28px;border-bottom:1px solid var(--linha);position:relative;font-size:16px}
+.pacote.destaque li{border-color:#ffffff22}
+.pacote li::before{content:"";position:absolute;left:2px;top:15px;width:12px;height:7px;border-left:2.5px solid var(--mar-claro);border-bottom:2.5px solid var(--mar-claro);transform:rotate(-45deg)}
+.pacote.destaque li::before{border-color:var(--sol)}
+.pacote li.ajustes{font-weight:700}
+.pacote .btn{justify-content:center}
+.pacote.destaque .btn-linha{border-color:var(--sol);background:var(--sol);color:var(--tinta)}
+.regra{margin-top:30px;background:#fff;border-left:6px solid var(--sol);border-radius:var(--r-sm);padding:20px 24px;max-width:780px}
+.regra p{margin:0}
+@media (max-width:900px){.pacotes{grid-template-columns:1fr}.pacote.destaque{transform:none}}
+
+/* exemplos */
+.exemplos{display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.exemplo{text-decoration:none;display:block}
+.exemplo .tela{position:relative;transition:transform .25s ease}
+.exemplo:hover .tela{transform:translateY(-6px)}
+.exemplo .vp{height:330px}
+.exemplo h3{font-size:22px;margin:16px 0 4px}
+.exemplo p{margin:0;color:var(--tinta-2);font-size:15px}
+.aviso{font-size:14px;color:var(--tinta-2);margin-top:26px}
+@media (max-width:900px){.exemplos{grid-template-columns:1fr}.exemplo .vp{height:280px}}
+
+/* extras */
+.extras-bloco{background:#fff;border-radius:var(--r-lg);padding:50px;display:grid;grid-template-columns:.9fr 1.1fr;gap:40px}
+.extras{list-style:none;padding:0;margin:0}
+.extras li{display:flex;justify-content:space-between;gap:20px;padding:18px 0;border-bottom:1px dashed var(--linha)}
+.extras li:last-child{border:0}
+.extras strong{display:block;font-size:18px}
+.extras span{color:var(--tinta-2);font-size:15px}
+.extras em{font-style:normal;font-family:"Bricolage Grotesque";font-weight:800;font-size:22px;white-space:nowrap;color:var(--mar)}
+.bf{background:var(--sol);border-radius:var(--r-sm);padding:16px 18px;margin-top:22px;font-weight:600}
+@media (max-width:820px){.extras-bloco{grid-template-columns:1fr;padding:30px 22px}}
+
+/* sobre */
+.sobre{display:grid;grid-template-columns:auto 1fr;gap:36px;align-items:start;max-width:880px}
+.sobre .ini{width:120px;height:120px;border-radius:50%;background:var(--mar);color:var(--sol);display:grid;place-items:center;font-family:"Bricolage Grotesque";font-weight:800;font-size:44px}
+.sobre p{font-size:18px;margin:14px 0 0}
+@media (max-width:620px){.sobre{grid-template-columns:1fr}}
+
+/* faq */
+.faq{max-width:820px}
+.faq details{border-bottom:1px solid var(--linha);padding:4px 0}
+.faq summary{cursor:pointer;font-weight:700;font-size:19px;padding:18px 34px 18px 0;list-style:none;position:relative}
+.faq summary::-webkit-details-marker{display:none}
+.faq summary::after{content:"+";position:absolute;right:4px;top:12px;font-size:28px;font-weight:400;transition:transform .2s}
+.faq details[open] summary::after{transform:rotate(45deg)}
+.faq details p{margin:0 0 20px;color:var(--tinta-2)}
+
+/* final */
+.final{background:var(--tinta);color:#fff;text-align:left;border-radius:var(--r-lg);padding:60px 50px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:30px}
+.final h2{font-size:clamp(32px,4.4vw,52px);max-width:16ch}
+.final p{color:#b9cad8;margin:12px 0 0}
+footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
+
+.zap-fixo{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--verde-zap);display:grid;place-items:center;box-shadow:0 10px 25px -6px #0f2a3d77}
+.zap-fixo svg{width:32px;height:32px}
+</style>
+</head>
+<body>
+
+<div class="wrap">
+  <header class="topo">
+    <a class="marca" href="#"><b>JP</b> Jefferson Privino</a>
+    <nav aria-label="Seções">
+      <a href="#como">Como funciona</a>
+      <a href="#pacotes">Preços</a>
+      <a href="#exemplos">Exemplos</a>
+      <a href="#duvidas">Dúvidas</a>
+    </nav>
+  </header>
+
+  <main>
+  <div class="hero">
+    <div>
+      <h1>Seu negócio com site próprio em 5 dias.</h1>
+      <p class="lead">Faço sites para pequenos negócios, com preço fechado e o número de ajustes combinado antes de começar. Você só paga a segunda metade quando aprovar.</p>
+      <div class="acoes">
+        <a class="btn btn-zap" data-zap href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg>Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-linha" href="#pacotes">Ver preços</a>
+      </div>
+      <ul class="garantias">
+        <li>A partir de R$ 597</li>
+        <li>Prévia antes de pagar tudo</li>
+        <li>Atendo todo o Brasil</li>
+      </ul>
+    </div>
+
+    <div class="vitrine" aria-label="Exemplos de sites que eu fiz">
+      <div class="tela t1"><div class="barra"><i></i><i></i><i></i><span>odontomare.com.br</span></div><div class="vp" data-w="1280"><iframe src="exemplos/clinica/" title="Exemplo: site de clínica odontológica" loading="lazy" tabindex="-1"></iframe></div></div>
+      <div class="tela t2"><div class="barra"><i></i><i></i><i></i><span>cantinadomucuripe.com.br</span></div><div class="vp" data-w="1280"><iframe src="exemplos/restaurante/" title="Exemplo: site de restaurante" loading="lazy" tabindex="-1"></iframe></div></div>
+      <div class="tela t3"><div class="vp" data-w="390"><iframe src="exemplos/salao/" title="Exemplo: site de salão de beleza no celular" loading="lazy" tabindex="-1"></iframe></div></div>
+      <div class="selo"><span><strong>5 dias</strong>do briefing ao site no ar</span></div>
+    </div>
+  </div>
+  </main>
+</div>
+
+<section class="processo" id="como">
+  <div class="wrap">
+    <h2 class="sec-titulo">Como funciona</h2>
+    <p class="sec-sub">Tudo pelo WhatsApp, sem reunião longa e sem você precisar entender de tecnologia.</p>
+    <ol class="passos">
+      <li><h3>Conversa</h3><p>Você me conta o que vende, para quem e manda fotos e logo. Leva uns 15 minutos.</p></li>
+      <li><h3>Proposta e entrada</h3><p>Mando o pacote certo, o preço fechado e quantas rodadas de ajuste estão incluídas. Começo com 50% de entrada.</p></li>
+      <li><h3>Prévia e ajustes</h3><p>Em até 3 dias você recebe o link da prévia e pede as mudanças, dentro das rodadas combinadas.</p></li>
+      <li><h3>Site no ar</h3><p>Aprovou, paga os outros 50% e o site vai para o ar, já com o botão do seu WhatsApp.</p></li>
+    </ol>
+  </div>
+</section>
+
+<section id="pacotes">
+  <div class="wrap">
+    <h2 class="sec-titulo">Preço fechado, sem surpresa no fim</h2>
+    <p class="sec-sub">O que muda o preço é o tamanho do site e quantas rodadas de ajuste você quer. Tudo fica escrito na proposta antes de começar.</p>
+    <div class="pacotes">
+      <article class="pacote">
+        <h3>Essencial</h3>
+        <p class="para">Para quem precisa aparecer no Google e receber contatos.</p>
+        <div class="preco">R$ 597</div>
+        <p class="parcela">50% na entrada, 50% na entrega</p>
+        <ul>
+          <li>Site de 1 página, rápido no celular</li>
+          <li>Botão do WhatsApp e mapa</li>
+          <li>Textos escritos por mim</li>
+          <li>Hospedagem gratuita</li>
+          <li class="ajustes">2 rodadas de ajustes</li>
+          <li>Entrega em até 5 dias úteis</li>
+        </ul>
+        <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Quero saber mais sobre o pacote Essencial (R$ 597)." href="#">Quero o Essencial</a>
+      </article>
+      <article class="pacote destaque">
+        <h3>Profissional</h3>
+        <p class="para">Para empresas que querem mostrar serviços, equipe e depoimentos.</p>
+        <div class="preco">R$ 1.200</div>
+        <p class="parcela">50% na entrada, 50% na entrega</p>
+        <ul>
+          <li>Até 5 páginas</li>
+          <li>Formulário de contato e WhatsApp</li>
+          <li>Configuração básica para o Google (SEO)</li>
+          <li>Perfil no Google Meu Negócio otimizado</li>
+          <li class="ajustes">3 rodadas de ajustes</li>
+          <li>Entrega em até 7 dias úteis</li>
+        </ul>
+        <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Quero saber mais sobre o pacote Profissional (R$ 1.200)." href="#">Quero o Profissional</a>
+      </article>
+      <article class="pacote">
+        <h3>Sob medida</h3>
+        <p class="para">Agendamento online, catálogo de produtos, área do cliente ou app.</p>
+        <div class="preco"><small>de</small> R$ 2.000 <small>a</small> R$ 3.000</div>
+        <p class="parcela">Valor fechado depois da conversa</p>
+        <ul>
+          <li>Tudo do Profissional</li>
+          <li>Funções sob medida</li>
+          <li>Pode virar app no celular (PWA)</li>
+          <li>Painel para você atualizar</li>
+          <li class="ajustes">4 rodadas de ajustes</li>
+          <li>Prazo combinado na proposta</li>
+        </ul>
+        <a class="btn btn-linha" data-zap data-msg="Oi, Jefferson! Tenho um projeto sob medida e quero um orçamento." href="#">Pedir orçamento</a>
+      </article>
+    </div>
+    <div class="regra">
+      <p><strong>O que é uma rodada de ajustes?</strong> Você junta numa mensagem tudo o que quer mudar na prévia e eu faço de uma vez. Se precisar de mais rodadas além das do pacote, cada uma custa R$ 100. O domínio (.com.br, cerca de R$ 40 por ano) é registrado no seu nome.</p>
+    </div>
+  </div>
+</section>
+
+<section id="exemplos" style="padding-top:20px">
+  <div class="wrap">
+    <h2 class="sec-titulo">Exemplos</h2>
+    <p class="sec-sub">Clique para abrir e navegar como se fosse o seu cliente.</p>
+    <div class="exemplos">
+      <a class="exemplo" href="exemplos/clinica/" target="_blank" rel="noopener">
+        <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Clínica odontológica</span></div><div class="vp" data-w="1280"><iframe src="exemplos/clinica/" title="Prévia: clínica" loading="lazy" tabindex="-1"></iframe></div></div>
+        <h3>Clínica odontológica</h3><p>Essencial: serviços, convênios e agendamento pelo WhatsApp.</p>
+      </a>
+      <a class="exemplo" href="exemplos/restaurante/" target="_blank" rel="noopener">
+        <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Restaurante</span></div><div class="vp" data-w="1280"><iframe src="exemplos/restaurante/" title="Prévia: restaurante" loading="lazy" tabindex="-1"></iframe></div></div>
+        <h3>Restaurante</h3><p>Profissional: cardápio, horários, reservas e delivery.</p>
+      </a>
+      <a class="exemplo" href="exemplos/salao/" target="_blank" rel="noopener">
+        <div class="tela"><div class="barra"><i></i><i></i><i></i><span>Salão de beleza</span></div><div class="vp" data-w="1280"><iframe src="exemplos/salao/" title="Prévia: salão" loading="lazy" tabindex="-1"></iframe></div></div>
+        <h3>Salão de beleza</h3><p>Essencial: serviços com preço, equipe e botão de agendar.</p>
+      </a>
+    </div>
+    <p class="aviso">Estes três são projetos conceito, com empresas fictícias, para você ver o estilo do trabalho.</p>
+  </div>
+</section>
+
+<section style="padding-top:20px">
+  <div class="wrap">
+    <div class="extras-bloco">
+      <div>
+        <h2 class="sec-titulo" style="font-size:clamp(30px,3.8vw,44px)">Serviços rápidos</h2>
+        <p class="sec-sub" style="margin-bottom:0">Para quem precisa de resultado esta semana, ou como complemento do site.</p>
+        <p class="bf">Black Friday em 27/11: página de ofertas pronta em 48 horas, se fechar até 24/11.</p>
+      </div>
+      <ul class="extras">
+        <li><div><strong>Página de Black Friday ou Natal</strong><span>Ofertas, contagem regressiva e botão de compra no WhatsApp</span></div><em>R$ 297</em></li>
+        <li><div><strong>Google Meu Negócio</strong><span>Criação ou correção do perfil para aparecer no mapa</span></div><em>R$ 150</em></li>
+        <li><div><strong>4 Reels editados</strong><span>Você grava no celular, eu edito com legenda e ritmo</span></div><em>R$ 250</em></li>
+        <li><div><strong>Campanha no Instagram e Facebook</strong><span>Configuração do anúncio, público e acompanhamento por 7 dias</span></div><em>R$ 300</em></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section>
+  <div class="wrap">
+    <div class="sobre">
+      <div class="ini" aria-hidden="true">JP</div>
+      <div>
+        <h2 class="sec-titulo" style="font-size:clamp(30px,3.8vw,44px)">Quem vai fazer o seu site</h2>
+        <p>Sou o Jefferson, de Fortaleza. Trabalho com marketing e construo sites e aplicativos para a web. Um deles é o <a href="https://vistoria-ape.netlify.app" target="_blank" rel="noopener">Vistoria Apê</a>, um app gratuito para quem vai receber as chaves do apartamento.</p>
+        <p>Atendo pelo WhatsApp, respondo no mesmo dia e falo sem tecniquês.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="duvidas" style="padding-top:0">
+  <div class="wrap">
+    <h2 class="sec-titulo">Dúvidas comuns</h2>
+    <div class="faq" style="margin-top:30px">
+      <details><summary>Preciso pagar mensalidade?</summary><p>Não. A hospedagem é gratuita para sites desse porte. O único custo fixo é o domínio (.com.br), cerca de R$ 40 por ano, pago direto no Registro.br e no seu nome.</p></details>
+      <details><summary>Como funciona o pagamento?</summary><p>50% por Pix para começar e 50% quando você aprovar a prévia, antes de o site ir para o ar.</p></details>
+      <details><summary>E se eu quiser mudar algo depois de pronto?</summary><p>Ajustes pequenos nos primeiros 30 dias são por minha conta. Depois disso, ou para mudanças grandes, combinamos o valor antes.</p></details>
+      <details><summary>Você atende fora de Fortaleza?</summary><p>Sim, atendo todo o Brasil. Todo o processo é pelo WhatsApp.</p></details>
+      <details><summary>O que eu preciso enviar?</summary><p>Logo (se tiver), fotos do seu negócio, a lista de serviços ou produtos e o seu contato. Se não tiver fotos boas, uso imagens de banco gratuitas.</p></details>
+    </div>
+  </div>
+</section>
+
+<section style="padding-top:0">
+  <div class="wrap">
+    <div class="final">
+      <div>
+        <h2>Vamos colocar o seu negócio na internet?</h2>
+        <p>Me chama no WhatsApp e em poucos minutos te digo qual pacote faz sentido.</p>
+      </div>
+      <a class="btn btn-zap" data-zap href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg>Falar no WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<footer><div class="wrap">Jefferson Privino · Fortaleza, CE · WhatsApp (85) 99784-6594</div></footer>
+
+<a class="zap-fixo" data-zap href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg></a>
+
+<script>
+// Links do WhatsApp (guarda a origem do anúncio na mensagem)
+(function(){
+  var num = "5585997846594";
+  var params = new URLSearchParams(location.search);
+  var origem = params.get("utm_source") === "meta" ? " (vi o anúncio)" : "";
+  document.querySelectorAll("[data-zap]").forEach(function(a){
+    var msg = (a.dataset.msg || "Oi, Jefferson! Vi seu site e quero um orçamento para o meu negócio.") + origem;
+    a.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
+    a.target = "_blank"; a.rel = "noopener";
+    a.addEventListener("click", function(){ if (window.fbq) fbq("track","Contact"); });
+  });
+  // Escala os iframes das vitrines
+  function escala(){
+    document.querySelectorAll(".vp").forEach(function(vp){
+      var f = vp.querySelector("iframe"), w = +vp.dataset.w, s = vp.clientWidth / w;
+      f.style.width = w + "px"; f.style.height = (vp.clientHeight / s) + "px"; f.style.transform = "scale(" + s + ")";
+    });
+  }
+  escala(); addEventListener("resize", escala);
+})();
+</script>
+</body>
+</html>

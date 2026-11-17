@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Studio Iracema · Salão de beleza em Fortaleza (projeto conceito)</title>
+<meta name="robots" content="noindex">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Syne:wght@600;800&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+<style>
+:root{--rosa:#F7D9DC;--ameixa:#4A1D3F;--lilas:#B98AB0;--creme:#FFF8F6;--tinta:#2B1326}
+*{box-sizing:border-box}body{margin:0;font:400 17px/1.6 "DM Sans",system-ui,sans-serif;color:var(--tinta);background:var(--creme)}
+.conceito{background:var(--tinta);color:#fff;font-size:13px;text-align:center;padding:6px}.conceito a{color:var(--rosa)}
+.w{max-width:1100px;margin:0 auto;padding:0 20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.logo{font-family:Syne;font-weight:800;font-size:22px}
+.btn{background:var(--ameixa);color:#fff;padding:13px 22px;border-radius:999px;text-decoration:none;font-weight:700;display:inline-block}
+.hero{background:var(--rosa);border-radius:0 0 120px 0;padding:56px 44px;margin-bottom:60px;position:relative;overflow:hidden}
+.hero::after{content:"";position:absolute;right:-60px;top:-60px;width:260px;height:260px;border-radius:50%;background:var(--lilas);opacity:.5}
+h1{font-family:Syne;font-weight:800;font-size:clamp(40px,7vw,78px);line-height:.98;margin:0 0 20px;letter-spacing:-.02em;position:relative;z-index:1}
+.hero p{max-width:34ch;font-size:19px;margin:0 0 26px;position:relative;z-index:1}
+h2{font-family:Syne;font-weight:800;font-size:clamp(28px,4vw,42px);margin:0 0 24px;line-height:1.05}
+.lista{list-style:none;padding:0;margin:0 0 60px;display:grid;grid-template-columns:1fr 1fr;gap:0 40px}
+.lista li{display:flex;justify-content:space-between;padding:16px 0;border-bottom:1px solid #4a1d3f22;font-size:18px}
+.lista b{color:var(--ameixa)}
+.equipe{display:grid;grid-template-columns:repeat(3,1fr);gap:18px;margin-bottom:60px}
+.equipe div{background:#fff;border-radius:24px;padding:22px;text-align:center}
+.av{width:90px;height:90px;border-radius:50%;margin:0 auto 12px;background:linear-gradient(135deg,var(--lilas),var(--rosa))}
+.equipe h3{margin:0;font-family:Syne}.equipe p{margin:4px 0 0;color:#7a5a72;font-size:15px}
+.agenda{background:var(--ameixa);color:#fff;border-radius:28px;padding:44px;text-align:center;margin-bottom:40px}
+.agenda .btn{background:var(--rosa);color:var(--ameixa)}
+footer{padding:20px 0 40px;font-size:15px;color:#7a5a72}
+@media(max-width:700px){.hero{padding:40px 22px;border-radius:0 0 60px 0}.lista{grid-template-columns:1fr}.equipe{grid-template-columns:1fr}.agenda{padding:32px 20px}}
+</style>
+</head>
+<body>
+<div class="conceito">Projeto conceito com empresa fictícia, feito por <a href="../../" target="_top">Jefferson Privino</a></div>
+<div class="w"><header><div class="logo">Studio Iracema</div><a class="btn" href="#a">Agendar</a></header></div>
+<div class="w"><div class="hero"><h1>Cabelo, unhas e sobrancelha no mesmo lugar.</h1><p>Salão na Varjota com horário marcado, sem espera. Agende pelo WhatsApp em 1 minuto.</p><a class="btn" href="#a">Ver horários livres</a></div></div>
+<div class="w">
+<h2>Serviços e preços</h2>
+<ul class="lista">
+  <li>Corte feminino<b>R$ 90</b></li><li>Escova<b>R$ 55</b></li>
+  <li>Coloração<b>a partir de R$ 180</b></li><li>Mechas<b>a partir de R$ 350</b></li>
+  <li>Manicure e pedicure<b>R$ 60</b></li><li>Design de sobrancelha<b>R$ 45</b></li>
+</ul>
+<h2>Equipe</h2>
+<div class="equipe">
+  <div><div class="av"></div><h3>Lia</h3><p>Coloração e mechas</p></div>
+  <div><div class="av"></div><h3>Rafa</h3><p>Corte e escova</p></div>
+  <div><div class="av"></div><h3>Bia</h3><p>Unhas e sobrancelha</p></div>
+</div>
+<div class="agenda" id="a"><h2>Tem horário amanhã</h2><p>Terça a sábado, das 9h às 19h.</p><a class="btn" href="#">Agendar pelo WhatsApp</a></div>
+<footer>Studio Iracema · Varjota, Fortaleza · (85) 0000-0000</footer>
+</div>
+</body></html>
