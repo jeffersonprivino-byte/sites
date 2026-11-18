@@ -194,6 +194,25 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
   .revela{opacity:1;transform:none}
 }
 @media (min-width:901px){.pacote.destaque.revela.visivel{transform:translateY(-12px)}}
+/* ===== Prévia grátis + barra fixa no celular ===== */
+.previa{display:grid;grid-template-columns:1fr 1.1fr;gap:40px;align-items:center;background:var(--tinta);color:#fff;border-radius:var(--r-lg);padding:44px;margin:0 0 70px}
+.previa h2{font-size:clamp(30px,3.6vw,44px);font-weight:800;margin:0 0 12px}
+.previa p{color:#b9cad8;margin:0;font-size:17px}
+.previa-form{display:grid;gap:14px;background:#ffffff0f;border:1px solid #ffffff22;border-radius:16px;padding:22px}
+.previa-form label{display:grid;gap:6px;font-weight:600;font-size:14px;color:#dce8f1}
+.previa-form input,.previa-form select{font:inherit;font-size:16px;padding:13px 14px;border-radius:10px;border:1px solid #ffffff33;background:#fff;color:var(--tinta)}
+.previa-form button{justify-content:center;width:100%}
+.previa-form small{color:#9fb3c4;font-size:13px}
+.barra-zap{display:none}
+@media (max-width:900px){.previa{grid-template-columns:1fr;padding:28px 20px}}
+@media (max-width:720px){
+  .zap-fixo{display:none}
+  .barra-zap{display:flex;position:fixed;left:0;right:0;bottom:0;z-index:55;gap:10px;align-items:center;padding:10px 14px calc(10px + env(safe-area-inset-bottom));background:#fff;border-top:1px solid var(--linha);box-shadow:0 -8px 24px -12px #0f2a3d55}
+  .barra-zap span{font-size:13px;line-height:1.25;color:var(--tinta-2);flex:1}
+  .barra-zap span b{color:var(--tinta);display:block;font-size:14px}
+  .barra-zap .btn{padding:12px 16px;font-size:15px;white-space:nowrap}
+  footer{padding-bottom:120px}
+}
 .zap-fixo{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--verde-zap);display:grid;place-items:center;box-shadow:0 10px 25px -6px #0f2a3d77}
 .zap-fixo svg{width:32px;height:32px}
 </style>
@@ -216,14 +235,14 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
   <div class="hero">
     <div>
       <h1><span class="linha"><span>Seu negócio</span></span><span class="linha"><span>com site próprio</span></span><span class="linha"><span>em 5 dias.</span></span></h1>
-      <p class="lead">Faço sites para pequenos negócios, com preço fechado e o número de ajustes combinado antes de começar. Você só paga a segunda metade quando aprovar.</p>
+      <p class="lead">Me diga o nome do seu negócio e em até 24 horas te mando uma <strong>prévia grátis</strong> de como ficaria o seu site. Gostou? Fica pronto em 5 dias, com preço fechado.</p>
       <div class="acoes">
-        <a class="btn btn-zap" data-zap href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg>Pedir orçamento no WhatsApp</a>
+        <a class="btn btn-zap" data-zap href="#"><svg viewBox="0 0 32 32" fill="currentColor" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg>Quero minha prévia grátis</a>
         <a class="btn btn-linha" href="#pacotes">Ver preços</a>
       </div>
       <ul class="garantias">
         <li>A partir de R$ 597</li>
-        <li>Prévia antes de pagar tudo</li>
+        <li>Prévia grátis em 24h, sem compromisso</li>
         <li>Atendo todo o Brasil</li>
       </ul>
     </div>
@@ -235,6 +254,21 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
       <div class="selo"><span><strong>5 dias</strong>do briefing ao site no ar</span></div>
     </div></div>
   </div>
+  <section class="previa revela" id="previa" aria-labelledby="previa-titulo">
+    <div class="previa-txt">
+      <h2 id="previa-titulo">Veja o seu site antes de decidir.</h2>
+      <p>Preencha dois campos. A mensagem já vai pronta para o meu WhatsApp e eu te respondo com a prévia em até 24 horas. Sem custo e sem compromisso.</p>
+    </div>
+    <form class="previa-form" id="form-previa">
+      <label>Nome do seu negócio<input name="negocio" required placeholder="Ex.: Barbearia do Zé" autocomplete="organization"></label>
+      <label>Segmento<select name="segmento">
+        <option>Salão ou barbearia</option><option>Clínica ou consultório</option><option>Restaurante ou delivery</option><option>Pet shop ou veterinária</option><option>Loja ou comércio</option><option>Serviços (advocacia, contabilidade, oficina...)</option><option>Outro</option>
+      </select></label>
+      <label>Cidade<input name="cidade" placeholder="Ex.: Fortaleza" autocomplete="address-level2"></label>
+      <button class="btn btn-zap" type="submit">Receber minha prévia no WhatsApp</button>
+      <small>Você será levado ao WhatsApp com a mensagem pronta. É só enviar.</small>
+    </form>
+  </section>
   </main>
 </div>
 
@@ -389,6 +423,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 
 <footer><div class="wrap">Jefferson Privino · Fortaleza, CE · WhatsApp (85) 99784-6594</div></footer>
 
+<div class="barra-zap"><span><b>Prévia grátis em 24h</b>Sem compromisso</span><a class="btn btn-zap" data-zap href="#">Quero a minha</a></div>
 <a class="zap-fixo" data-zap href="#" aria-label="Falar no WhatsApp"><svg viewBox="0 0 32 32" fill="#fff" aria-hidden="true"><path d="M16 3a13 13 0 0 0-11.2 19.6L3 29l6.6-1.7A13 13 0 1 0 16 3Zm0 23.7c-2 0-4-.6-5.7-1.6l-.4-.2-3.9 1 1-3.8-.3-.4A10.7 10.7 0 1 1 16 26.7Zm5.9-8c-.3-.2-1.9-1-2.2-1-.3-.2-.5-.2-.7.1l-1 1.3c-.2.2-.4.2-.7.1a8.8 8.8 0 0 1-4.4-3.8c-.3-.6.3-.5 1-1.7.1-.2 0-.4 0-.6l-1-2.4c-.3-.6-.5-.5-.7-.5h-.6c-.2 0-.6 0-.9.4-.3.3-1.2 1.2-1.2 2.9s1.2 3.3 1.4 3.6c.2.2 2.4 3.7 5.8 5.2 2.2.9 3 1 4.1.8.7-.1 1.9-.8 2.2-1.5.3-.8.3-1.4.2-1.5 0-.2-.3-.3-.6-.4Z"/></svg></a>
 
 <script>
@@ -398,7 +433,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
   var params = new URLSearchParams(location.search);
   var origem = params.get("utm_source") === "meta" ? " (vi o anúncio)" : "";
   document.querySelectorAll("[data-zap]").forEach(function(a){
-    var msg = (a.dataset.msg || "Oi, Jefferson! Vi seu site e quero um orçamento para o meu negócio.") + origem;
+    var msg = (a.dataset.msg || "Oi, Jefferson! Quero a prévia grátis do site do meu negócio.") + origem;
     a.href = "https://wa.me/" + num + "?text=" + encodeURIComponent(msg);
     a.target = "_blank"; a.rel = "noopener";
     a.addEventListener("click", function(){ if (window.fbq) fbq("track","Contact"); });
@@ -452,6 +487,23 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
       c.addEventListener('mouseleave',function(){c.style.transform=''});
     });
   }
+})();
+</script>
+
+<script>
+(function(){
+  var f=document.getElementById('form-previa'); if(!f) return;
+  f.addEventListener('submit',function(e){
+    e.preventDefault();
+    var d=new FormData(f), neg=(d.get('negocio')||'').trim(), seg=d.get('segmento'), cid=(d.get('cidade')||'').trim();
+    var origem=new URLSearchParams(location.search).get('utm_source')==='meta'?' (vi o anúncio)':'';
+    var msg='Oi, Jefferson! Quero a prévia grátis do site do meu negócio.
+Negócio: '+neg+'
+Segmento: '+seg+(cid?'
+Cidade: '+cid:'')+origem;
+    if(window.fbq) fbq('track','Lead');
+    window.open('https://wa.me/5585997846594?text='+encodeURIComponent(msg),'_blank','noopener');
+  });
 })();
 </script>
 </body>
