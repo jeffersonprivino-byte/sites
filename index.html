@@ -203,6 +203,9 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 .previa-form input,.previa-form select{font:inherit;font-size:16px;padding:13px 14px;border-radius:10px;border:1px solid #ffffff33;background:#fff;color:var(--tinta)}
 .previa-form button{justify-content:center;width:100%}
 .previa-form small{color:#9fb3c4;font-size:13px}
+.previa>*{min-width:0}
+.previa-form input,.previa-form select{width:100%;min-width:0;box-sizing:border-box}
+.previa h2{overflow-wrap:anywhere}
 .barra-zap{display:none}
 @media (max-width:900px){.previa{grid-template-columns:1fr;padding:28px 20px}}
 @media (max-width:720px){
@@ -215,6 +218,7 @@ footer{padding:40px 0 100px;font-size:14px;color:var(--tinta-2)}
 }
 .zap-fixo{position:fixed;right:18px;bottom:18px;z-index:50;width:60px;height:60px;border-radius:50%;background:var(--verde-zap);display:grid;place-items:center;box-shadow:0 10px 25px -6px #0f2a3d77}
 .zap-fixo svg{width:32px;height:32px}
+@media (max-width:720px){.zap-fixo{display:none!important}}
 </style>
 </head>
 <body>
